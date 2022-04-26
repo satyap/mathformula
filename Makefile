@@ -7,4 +7,4 @@ all: calculus.pdf emf.pdf  math.pdf  ss.pdf
 	latex $<
 
 clean:
-	rm *.aux *.dvi *.log *.out *.toc
+	rm -f *.aux *.dvi *.log *.out *.toc
