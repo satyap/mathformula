@@ -1,0 +1,212 @@
+\documentclass[a4paper]{article}
+
+\include{formulainc}
+
+\newcommand{\derivx}[2]{%
+\begin{array}{c}\underline{\ud #1} \\ \ud #2\end{array}
+}
+\newcommand{\derix}[1]{%
+\begin{array}{c}\underline{\ud #1} \\ \ud x\end{array}
+}
+\newcommand{\derx}{%
+\begin{array}{c}\ud  \\ \overline{\ud x}\end{array}
+}
+
+\fancyhf[FL]{Calculus formul\ae\ by Satya}
+\fancyhf[FC]{2007/05/07}
+
+%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\thispagestyle{first}
+
+\begin{center}
+\LARGE { \textbf{Calculus} }
+\author
+\end{center}
+
+\tableofcontents
+
+
+\begin{enumerate}
+
+\section{Limits}
+
+\item
+\begin{displaymath}
+\lim_{x \to 0} \begin{array}{c}
+\underline{\sin x} \\
+x
+\end{array}
+=1
+\qquad
+\lim_{x \to 0} \cos x=1
+\end{displaymath}
+
+\item
+\begin{displaymath}
+\lim_{x \to 0}\begin{array}{c}
+\underline{a^x-1} \\
+x
+\end{array} = \log a (a>0)
+\qquad
+\lim_{x \to 0}\begin{array}{c}
+\underline{e^x-1} \\
+x
+\end{array} = \log e =1
+\end{displaymath}
+
+
+\item
+$\frac{1}{n}=\alpha$, then $\alpha \to 0$ as $n \to \infty$
+\begin{displaymath}
+\lim_{n \to \infty}(1+
+        \begin{array}{c}k \\ \overline{n}\end{array}) ^ n 
+=
+\lim_{\alpha \to 0}(1+
+        k\alpha) ^ {1/\alpha}
+=e^k
+\end{displaymath}
+If $k=1$,
+\begin{displaymath}
+\lim_{n \to \infty}(1+
+        \begin{array}{c}1 \\ \overline{n}\end{array}) ^ n
+=
+\lim_{\alpha \to 0}(1+
+        \alpha) ^ {1/\alpha} 
+=e
+\end{displaymath}
+
+\item
+\begin{displaymath}
+\lim_{x \to 0}\begin{array}{c}
+\underline{\log (1+x)} \\ x
+\end{array} =1
+\end{displaymath}
+
+\item
+\begin{displaymath}
+\lim_{x \to a}\begin{array}{c}
+\underline{x^n-a^n} \\ x-a
+\end{array} =na^{n-1}
+\end{displaymath}
+
+\section{Derivatives}
+
+\item
+Provided the limit exists,
+\begin{displaymath}
+f'(x) = \lim_{h \to 0}\begin{array}{c}
+\underline{f(x+h)-f(x)} \\ h
+\end{array}
+\end{displaymath}
+\begin{displaymath}
+f'(a) = \lim_{h \to 0}\begin{array}{c}
+\underline{f(a+h)-f(a)} \\ h
+\end{array}
+\end{displaymath}
+
+\item
+$\derix{k}  =0$ where $k$ is a constant
+
+\item
+(In the following formul\ae, consider this one:)
+
+If $y$ is a differentiable function of $u$ and $u$ is a differentiable function of $x$,
+then $
+\derix{y} = 
+\derivx{y}{u} 
+\cdot 
+\derix{u}
+$
+
+
+\item
+Remember, $
+\derix{y} = 
+\derivx{y}{u} 
+\cdot 
+\derix{u}
+$
+
+
+$
+\begin{array}{|l|l|l|l|}
+f(x) & \derx f(x) & f(u) (u=f(x)) &  \derx f(u) \\
+\hline
+x^n & nx^{n-1} & u^n & nu^{n-1}\derix{u} \\
+
+\hline
+\sin x & \cos x & \sin u & \cos u \derix{u} \\
+\hline
+\cos x & -\sin x & \cos u & -\sin u \derix{u} \\
+\hline
+
+\tan x & \sec^2 x & \tan u & \sec^2 u \derix{u} \\
+\hline
+\cot x & -\cosec^2 x & \cot u & -\cosec^2 u \derix{u} \\
+\hline
+
+\sec x & \sec x \tan x & \sec u & \sec u \tan u \derix{u} \\
+\hline
+\cosec x & - \cosec x \cot x & \cosec u & -\cosec u \cot u \derix{u} \\
+\hline
+
+e^x & e^x & e^u & e^u \derix{u} \\
+\hline
+a^x & a^x \ln a & a^u & a^u \ln a \derix{u} \\
+\hline
+
+\ln x & 1/x & \ln u & \frac{1}{u} \derix{u} \\
+\hline
+
+\end{array}
+$
+
+\item
+$\derx{(u+v)} = \derix{u} + \derix{v}
+\qquad
+\derx{(u-v)} = \derix{u} - \derix{v}$
+
+
+\item
+$\derx{(uv)} = u\derix{v} + v\derix{u}$
+
+\qquad
+$\derx{}\begin{array}{c}
+\underline{u} \\
+{v}
+\end{array} 
+= 
+\begin{array}{c}
+\underline{ v\derix{u} - u \derix{v} } \\
+v^2
+\end{array}
+v \ne 0$
+
+
+\item
+If $y=f(x)$ is a differentiable function of $x$ such that the inverse $x=g(y)$ is defined, then
+
+$\derivx{x}{y} = \begin{array}{c}
+1 \\
+\overline{\derivx{y}{x}}
+\end{array}
+(\derivx{y}{x} \ne 0)$
+
+\item
+If $x=g(y)$ is a differentiable function of $y$ such that the inverse $y=f(x)$ is defined, then
+
+$\derivx{y}{x} = \begin{array}{c}
+1 \\
+\overline{\derivx{x}{y}}
+\end{array}
+(\derivx{x}{y} \ne 0)$
+
+
+\subsubsection{Derivatives of inverse trigonometric functions}
+
+\end{enumerate}
+
+\end{document}

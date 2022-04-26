@@ -1,0 +1,949 @@
+\documentclass[a4paper]{article}
+
+\include{formulainc}
+
+\newcommand{\cplusd}{%
+(\begin{array}{c}
+\underline{C+D} \\
+2
+\end{array})
+}
+\newcommand{\cminusd}{%
+(\begin{array}{c}
+\underline{C-D} \\
+2
+\end{array})
+}
+
+
+\fancyhf[FL]{Math formul\ae\ by Satya}
+\fancyhf[FC]{2007/10/08}
+
+%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\thispagestyle{first}
+
+\begin{center}
+\LARGE { \textbf{Mathematics, Algebra, and Geometry} }
+\author
+\end{center}
+
+\tableofcontents
+
+\section{Algebra}
+
+
+\begin{enumerate}
+\item $(a+b)^2 = a^2 + 2ab + b^2
+\quad;\quad
+a^2 + b^2 = (a+b)^2 - 2ab$
+
+\item
+$(a-b)^2 = a^2 - 2ab + b^2
+\quad;\quad
+a^2 + b^2 = (a-b)^2 + 2ab$
+
+\item
+$(a+b+c)^2 = a^2 +b^2+c^2 + 2(ab+bc+ca)$
+
+\item
+$(a+b)^3=a^3+b^3 + 3ab(a+b)
+\qquad;\quad
+a^3+b^3= (a+b)^3 - 3ab(a+b)$
+
+\item
+$(a-b)^3=a^3-b^3 - 3ab(a-b)
+\qquad;\quad
+a^3-b^3= (a-b)^3 + 3ab(a-b)$
+
+\item
+$a^2-b^2 = (a+b)(a-b)$
+
+\item
+$a^3-b^3 = (a-b)(a^2 + ab + b^2)$
+
+\item
+$a^3+b^3 = (a+b)(a^2 - ab + b^2)$
+
+\item
+$a^n-b^n = (a-b) ( a^{(n-1)} + a^{(n-2)}b + a^{(n-3)}+b^2 + \dots + b^{(n-1)}) $
+$\quad \textrm{where } n \elemof{N}$
+
+\item
+$a^m.a^n = a^{m+n} \textrm{ where } m,n \elemof{Q}, a \elemof{R}$
+
+\item
+$\frac{a^m}{a^n}  = \left\{
+\begin{array}{ll}
+ a^{m-n} & \textrm{if } m>n \\
+ 1 & \textrm{if } m=n \\
+ \frac{1}{a^{n-m}} & \textrm{if } m<n; m,n \elemof{Q}, a \elemof{R}, a \ne 0
+\end{array}
+\right.$
+
+\item
+$(a^m)^n = a^{mn} = (a^n)^m; m,n \elemof{Q}, a \elemof{R}$
+
+\item
+$(ab)^n = a^{n} \cdot b^n \textrm{ where } a,b \elemof{R}, n \elemof{Q}$
+
+\item
+$(\frac{a}{b})^n = \frac{a^n}{b^n} \textrm{ where } a,b \elemof{R}, n \elemof{Q}$
+
+\item
+$a^0 = 1 \textrm{ where } a \elemof{R}, a \neq 0$
+
+\item
+$a^{-n} = \frac{1}{a^n}, a^n = \frac{1}{a^{-n}} \textrm{ where }$
+$a \elemof{R}, a \neq 0, n \elemof{Q}$
+
+\item
+$a^{p/q} = \sqrt[q]{a^p} \textrm { where } a \elemof{R}, a > 0, p,q \elemof{N}$
+
+\item
+$\textrm{If } a^m = a^n  \textrm{ where } a \elemof{R}, a \neq \pm 1, a \neq 0, 
+\textrm{ then } m=n$
+
+\item 
+If $a^n=b^n$ where $ n \neq 0$, then  $a = \pm b$
+
+\item
+If $a,x,y \elemof{Q}$ and $\sqrt x,  \sqrt y$
+are quadratic surds and if $a+\sqrt x = \sqrt y$,
+then $a=0$ and $x=y$
+
+\item 
+If $a,b,x,y \elemof{Q}$ and $\sqrt x,  \sqrt y$
+are quadratic surds and if $a+\sqrt x = b+\sqrt y$,
+then $a=b$ and $x=y$
+
+\subsection{Logarithms}
+
+\item
+$\log_a{mn} = log_a{m}+log_a{n}$
+where $a,m,n$ are positive real numbers and $a \neq 1$,
+
+\item
+$\log_a(\frac{m}{n}) = log_a{m}-log_a{n}$
+where $a,m,n$ are positive real numbers, $a \neq 1$,
+
+\item
+$\log_a m ^n = n \log_a m$
+where $a$ and $m$ are positive real numbers, $a \neq 1, n \elemof{R}$
+
+\item
+$log_b a = 
+%\frac{\log_k a}{\log_k b}
+\begin{array}{c}\underline{\log_k a} \\ \log_k b \end{array}
+$
+where $a,b,k$ are positive real numbers, $b \neq 1, k \neq 1$
+
+\item
+$\log_b a = 
+%\frac{1}{\log_a b}
+\begin{array}{c} 1 \\ \overline{\log_a b} \end{array}
+$ 
+where $a,b$ are positive real numbers, $a \neq 1, b \neq 1$
+
+\item
+If $a,m,n$ are positive real numbers, $a \neq 1$, and if
+$\log_a m = \log_a n$, then $m=n$
+
+\subsection{Complex numbers}
+
+\item
+If $a+ib =0$ where $a,b \elemof{R}$ and $i = \sqrt{-1}$,
+then $a=b=0$
+
+\item
+If $a+ib=x+iy$ where $a,b,x,y \elemof{R}$, $i = \sqrt{-1}$,
+then $a=x$ and $b=y$
+
+\subsection{Quadratic equations}
+
+\item
+The roots of the quadratic equation $ax^2 + bx+c=0; a \neq 0$
+are 
+%$\frac{-b \pm \sqrt{b^2-4ac}}{2a}$
+$\begin{array}{c}
+\underline{-b \pm \sqrt{b^2-4ac} } \\
+2a
+\end{array}$
+The solution set of the equation is
+$\Big\{ 
+%\frac{-b + \sqrt \Delta}{2a}, \frac{-b - \sqrt \Delta}{2a} 
+\begin{array}{ccc}
+\underline{-b + \sqrt \Delta} &,& \underline{-b - \sqrt \Delta} \\
+2a & & 2a \\
+\end{array}
+\Big\}$
+where $\Delta =$ discriminant $=b^2-4ac$
+
+\item
+The roots are real and distinct if $\Delta > 0$
+
+\item
+The roots are real and coincident if $\Delta = 0$
+
+\item
+The roots are non-real if $\Delta < 0$
+
+\item
+If $\alpha$ and $\beta$ are the roots of the equation 
+$ax^2 + bx+c=0; a \neq 0$,
+then
+\begin{enumerate}
+\item
+$\alpha +\beta = -\frac{b}{a} = - \frac{\mathrm{Coeff. of }x}{\mathrm{Coeff. of }x^2}$
+\item
+$\alpha \beta = \frac{c}{a} = \frac{\mathrm{Const. term}}{\mathrm{Coeff. of }x^2}$
+\end{enumerate}
+
+\item
+The quadratic equations whose roots are $\alpha$ and $\beta$
+is $(x-\alpha)(x-\beta)=0$
+i.e. $x^2 - (\alpha + \beta)x + \alpha\beta =0$
+i.e. $x^2 -Sx + P=0$
+where $S$ = sum of the roots and $P$ = product of the roots.
+
+\subsection{Sequences and series}
+
+\item 
+For an Arithmetic Progression (A.P.) whose first term is `$a$' and common
+difference is `$d$',
+\begin{enumerate}
+\item $n^{th}$ term $= t_n = a + (n-1) d$
+\item The sum of the first $n$ terms = 
+$S_n = \frac{n}{2}(a+l) = \frac{n}{2} \{2a+(n-l)d\}$
+where $l$ = last term = $a+(n-1)d$
+\end{enumerate}
+
+\item
+For a Geometric Progression (G.P.) whose first term is `$a$' and common
+ratio is `$r$',
+\begin{enumerate}
+\item $n^{th}$ term $= t_n = ar^{n-1}$
+\item The sum of the first n terms = $S_n  
+\begin{array}{lcl}
+=& \underline{a(1-r^n)} & $ if $r \le 1 \\
+ & 1-r &  \\
+=& \underline{a(r^n-1)} & $ if $r \ge 1 \\
+ & r-1      &  \\
+=& na       & $ if $ r=1 \\
+\end{array}$
+\end{enumerate}
+
+\item
+For any sequence $\{ t_n \}, S_n - S_{n-1} = t_n$ where
+$S_n=$ sum of the first $n$ terms.
+
+\item
+$\sum_{r=1}^n r = 1+2+3+4+ \dots +n = \frac{n}{2}(n+1)$
+
+\item
+$\sum_{r=1}^n r^2 = 1^2+2^2+3^2+4^2+ \dots +n^2 = \frac{n}{6}(n+1)(2n+1)$
+
+\item
+$\sum_{r=1}^n r^3 = 1^3+2^3+3^3+4^3+ \dots +n^3 = \frac{n^2}{4}(n+1)^2$
+
+
+\subsection{Factorials and Probability}
+
+\item
+$\lfloor n = n! = 1.2.3.4. \dots (n-1)n$
+
+\item
+$n!=n(n-1)! = n(n-1)(n-2)! = n(n-1)(n-2)(n-3)! = \dots$
+
+\item
+$0! = 1$
+
+\item
+${}^nP_r = \frac{n!}{(n-r)!} $
+$\qquad$
+${}^nC_r = \frac{n!}{r!(n-r)!}$
+
+\item
+${}^nP_0=1 \qquad {}^nP_1=n \qquad {}^nP_2=n(n-1) \qquad {}^nP_3=n(n-1)(n-2)\dots$
+
+\item
+${}^nC_0=1 \qquad {}^nC_1=n \qquad {}^nC_2=\frac{n(n-1)}{2!}
+ \qquad {}^nC_3=\frac{n(n-1)(n-2)}{3!}\dots$
+
+\item
+$\begin{array}{c}
+{}^nP_r \\
+\hline
+{}^nC_r \\
+\end{array}
+= r!$
+
+\item
+${}^nC_r = {}^nC_{n-r} \qquad
+{}^nC_{r-1} +{}^nC_{r} = {}^{n+1}C_{r}$
+
+\item
+If ${}^nC_x = {}^nC_y$, then $x=y$ or $x+y=n$
+
+\item
+If $a,b \elemof{R}$ and $n \elemof{N}$, then
+$(a+b)^n = {}^nC_0 a^n b^0 + {}^nC_1 a^{n-1} b^1 + {}^nC_2 a^{n-2} b^2 +
+\dots + {}^nC_r a^{n-r} b^r + \dots
+{}^nC_n a^0 b^n
+$
+
+\item
+The general term in the expansion of $(a+b)^n$ is given by
+$t_{r+1} = {}^nC_r a^{n-r} b^r$
+
+\section{Trigonometry}
+
+\item
+$\pi^c = 180 \degree;
+\qquad
+1^c = (\begin{array}{c}180 \degree\\ \hline\pi\end{array}) 
+= 57 \degree 17'44.8";
+\qquad
+1 \degree = 0.0175 radians
+$
+
+\item
+$s=r\theta$ where 
+$s=$ arc length, $r=$ radius and $\theta$ 
+is the angle in radians subtended by the arc at the centre of the circle.
+
+\item
+$A=\frac{1}{2} r^2 \theta = \frac{1}{2}rs$ where $A=$ area
+of sector of a circle,
+$s=$ arc length, $r=$ radius and $\theta$ 
+is the angle in radians subtended by the arc at the centre of the circle.
+
+\section{Trigonometric identities}
+
+\item
+\begin{equation}\label{eq:sincos}
+\sin^2 \theta + \cos^2 \theta = 1
+\end{equation}
+
+\item
+These follow by dividing \ref{eq:sincos} by $\cos^2\theta$ and $\sin^2 \theta$
+respectively:
+\begin{eqnarray}
+\sec^2 \theta &=& 1+ \tan^2 \theta \\
+\cosec^2 \theta &=& 1+ \cot^2 \theta
+\end{eqnarray}
+
+\item
+These follow because $\sec$, $\cosec$, $\cot$ are reciprocals of 
+$\cos$, $\sin$, and $\tan$:
+\begin{eqnarray}
+\cos\theta\sec\theta&=&1 \\
+\sin\theta\cosec\theta&=&1 \\
+\tan\theta\cot\theta&=&1
+\end{eqnarray}
+
+\item
+$\tan \theta = 
+\begin{array}{c} \sin \theta \\ \hline \cos\theta \end{array}
+\qquad
+\cot \theta =
+\begin{array}{c} \cos \theta \\ \hline \sin\theta\end{array}
+$
+
+\subsection{Angular relations}
+
+\item
+$-1 \leq \cos \theta \leq 1$ i.e. $| \cos \theta | \leq 1$
+\qquad
+$-1 \leq \sin \theta \leq 1$ i.e. $| \sin \theta | \leq 1$
+
+\item
+\begin{eqnarray}
+\sin n \pi = & 0, & n\elemof{I} \\
+\cos n \pi = & (-1)^n, & n\elemof{I} \\
+\sin (2n+1)\frac{\pi}{2} = & (-1)^n, & n \elemof{I} \\
+\cos (2n+1)\frac{\pi}{2} = & 0, & n \elemof{I}
+\end{eqnarray}
+
+\item
+$\cos (-\theta) = \cos \theta
+\qquad
+\sin (-\theta) = -\sin \theta
+\qquad
+\tan (-\theta) = -\tan \theta$
+
+\item
+$\begin{array}{|c|c|c|c|c|c|}
+\hline
+ & 0\degree & 30\degree & 45 \degree & 60 \degree & 90 \degree \\
+\hline
+\sin & 0 & \half & \frac{1}{\sqrt{2}} & \frac{\sqrt 3}{2} & 1 \\
+\hline
+\cos & 1 & \frac{\sqrt 3}{2} & \frac{1}{\sqrt{2}} & \half & 1 \\
+\hline
+\tan & 0 & \frac{1}{\sqrt 3} & 1 & \sqrt 3 & \infty \\
+\hline
+ & 0 & \frac{\pi}{6} & \frac{\pi}{4} & \frac{\pi}{3} & \frac{\pi}{2}\\
+\hline
+\end{array}$
+
+
+\item
+$\sin (n\pi \pm \theta) = \textbf{(sign)} \sin \theta, n \elemof{I}$, sign is determined by quadrant to which the angle belongs.
+\item
+$\cos (n\pi \pm \theta) = \textbf{(sign)} \cos \theta, n \elemof{I}$
+
+
+\item
+$\sin ((2n+1)\frac{\pi}{2} \pm \theta) = \textbf{(sign)} \cos \theta, n \elemof{I}$, sign is determined by quadrant to which the angle belongs.
+\item
+$\cos ((2n+1)\frac{\pi}{2} \pm \theta) = \textbf{(sign)} \sin \theta, n \elemof{I}$
+
+\item
+If $\sin \theta = \sin \alpha$, then $\theta=n\pi + (-1)^n \alpha, n \elemof{I}$
+\item
+If $\cos \theta = \cos \alpha$, then $\theta=2n\pi + \alpha, n \elemof{I}$
+\item
+If $\tan \theta = \tan \alpha$, then $\theta=n\pi + \alpha, n \elemof{I}$
+
+\subsection{Sine-Cosine-Tangent Combos}
+
+\item
+$\begin{array}{rcl}
+\sin(\alpha + \beta) &=& \sin\alpha \cos\beta + \cos\alpha \sin\beta \\
+\sin(\alpha - \beta) &=& \sin\alpha \cos\beta - \cos\alpha \sin\beta \\
+\cos(\alpha + \beta) &=& \cos\alpha \cos\beta - \sin\alpha \sin\beta \\
+\cos(\alpha - \beta) &=& \cos\alpha \cos\beta + \sin\alpha \sin\beta
+\end{array}$
+%$\begin{array}{c|cc}
+% & \alpha + \beta & \alpha - \beta \\
+%\hline
+%\sin & sc+cs & sc-cs \\
+%\cos & cc-ss & cc+ss 
+%\end{array}$
+
+\item
+$\begin{array}{rcl}
+2\sin\alpha \cos\beta &=& \sin (\alpha+\beta) + \sin (\alpha-\beta) \\
+2\cos\alpha \sin\beta &=& \sin (\alpha+\beta) - \sin (\alpha-\beta) \\
+2\cos\alpha \cos\beta &=& \cos (\alpha+\beta) + \cos (\alpha-\beta) \\
+2\sin\alpha \sin\beta &=& \cos (\alpha-\beta) - \cos (\alpha+\beta) \\
+\end{array}$
+
+\item
+$\begin{array}{rcl}
+\sin C + \sin D &=& 2\sin\cplusd \cos\cminusd \\
+\sin C - \sin D &=& 2\cos\cplusd \sin\cminusd \\
+\cos C + \cos D &=& 2\cos\cplusd \cos\cminusd \\
+\cos C - \cos D &=& -2\sin\cplusd \sin\cminusd
+\end{array}$
+
+\item
+Tan relations:
+\begin{equation}\label{eq:tanaplusb}
+\tan(\alpha + \beta) =
+\begin{array}{c}
+\tan\alpha + \tan\beta \\
+\overline{1 - \tan\alpha \tan\beta}
+\end{array}
+\quad
+\tan(\alpha - \beta) =
+\begin{array}{c}
+\tan\alpha - \tan\beta \\
+\overline{1 + \tan\alpha \tan\beta}
+\end{array}
+\end{equation}
+
+\subsection{Halving angles}
+
+(In the following, sometimes we use $2\theta = \alpha$, and $\theta=\alpha/2$)
+
+\item
+$\sin 2\theta = 2\sin\theta \cos\theta$
+
+\item
+\begin{equation}\label{eq:cos2theta}
+\cos 2\theta = \cos^2\theta - \sin^2 \theta = 2\cos^2 \theta - 1 = 1 - 2\sin^2\theta
+\end{equation}
+
+\item
+By \ref{eq:cos2theta},
+$\cos^2 \theta = \half (1+ \cos 2\theta)$
+and
+$\sin^2 \theta = \half (1- \cos 2\theta)$
+
+\item
+By \ref{eq:tanaplusb},
+$\tan 2 \theta = 
+\begin{array}{c}
+2 \tan \theta \\
+\overline{  1-  \tan^2 \theta}
+\end{array}
+$
+
+\item
+If $\tan \theta = t$, then
+$\cos 2\theta = 
+\begin{array}{c}
+1-t^2 \\
+\overline{1+t^2}
+\end{array}$
+\qquad
+$\sin 2\theta = 
+\begin{array}{c}
+2t \\
+\overline{1+t^2}
+\end{array}$
+
+\subsubsection{More angular trigonometric relations}
+
+\item
+$\sin 3\theta = 3\sin\theta - 4 \sin^3\theta$
+
+\item
+$\cos 3\theta = 4\cos^3 \theta - 3\cos \theta$
+
+\item
+$\tan 3 \theta = \begin{array}{c}
+\underline{3\tan\theta - \tan ^3\theta} \\
+1-3\tan^2\theta
+\end{array}$
+
+\subsection{Trigonometric Rules}
+
+\item
+Sine Rule: In a $\Delta ABC$,
+$\begin{array}{ccccccc}
+a & = & b & = & c & = & 2R \\
+\overline{\sin A} & & \overline{\sin B} & & \overline{\sin C} & &
+\end{array}$
+where $R$ is the circum-radius of the triangle.
+
+\item
+Cosine Rule: In a $\Delta ABC$,
+$\begin{array}{rcl}
+a^2 &=& b^2 + c^2 -2bc\cos A \\
+b^2 &=& c^2 + a^2 -2ca\cos B \\
+c^2 &=& a^2 + b^2 -2ab\cos C
+\end{array}$
+
+\item
+Projection Rule: In a $\Delta ABC$,
+$\begin{array}{rcl}
+a &=& b\cos C + c\cos B \\
+b &=& c\cos A + a\cos C \\
+c &=& a\cos B + b\cos A
+\end{array}$
+
+\item
+Area of $\Delta ABC = 
+\half bc \sin A =
+\half ca \sin B =
+\half ab \sin C$
+(half of the product of the length of two sides and the sine of the angle between them.)
+
+\subsection{Inverse trigonometric relations}
+
+\item
+$\cosec^{-1}\frac{1}{x} = \sin ^{-1} x$
+\qquad
+$\sec^{-1}\frac{1}{x} = \cos ^{-1} x$
+\qquad
+$\cot^{-1}\frac{1}{x} = \tan ^{-1} x$
+
+\item
+$\sin^{-1}(\sin x) = x$ for $-\frac{\pi}{2} \le x \le \frac{\pi}{2}$
+
+$\cos^{-1}(\cos x) = x$ for $0 \le x \le \pi$
+
+$\tan^{-1}(\tan x) = x$ for $-\frac{\pi}{2} < x < \frac{\pi}{2}$
+
+\item
+$\sin^{-1}(-x) = -\sin^{-1}x$ for $-1 \le x \le 1$
+
+$\cos^{-1}(-x) = \pi - \cos^{-1}x$ for $-1 \le x \le 1$
+
+$\tan^{-1}(-x) = -\tan^{-1}x$ $\forall x \elemof{R}$
+
+
+\item
+If $x>0, y>0$
+
+$\tan^{-1}x - \tan^{-1}y = \tan^{-1}(
+\begin{array}{c}
+x-y \\
+\overline{1+xy}
+\end{array}
+)$
+
+Additionally, if $xy<1$, then 
+$\tan^{-1}x + \tan^{-1}y = \tan^{-1}(
+\begin{array}{c}
+x+y \\
+\overline{1-xy}
+\end{array}
+)$
+
+and, if $xy>1$, then
+$\tan^{-1}x + \tan^{-1}y = \pi + \tan^{-1}(
+\begin{array}{c}
+x+y \\
+\overline{1-xy}
+\end{array}
+)$
+
+
+\section{Coordinate geometry}
+
+\item
+\textbf{Distance formula:}
+Distance between two points $P(x_1, y_1)$ and $Q(x_2,y_2)$ is given by
+
+$d(P,Q) = \sqrt{(x_2-x_1)^2 + (y_2-y_1)^2}$ 
+
+Distance of the point $P(x,y)$ from the origin is
+
+$d(O,P) = \sqrt{x^2+y^2}$
+
+\item
+\textbf{Section formula:}
+If $A=(x_1,y_1)$, $B=(x_2,y_2)$ and $C(x,y)$ 
+divides $AB$ in the ratio $m:n$ then
+
+$\begin{array}{rclrc}
+x= & \underline{mx_2+nx_1}  &, \qquad & y=& \underline{my_2+ny_1} \\
+ & m+n & & & m+n 
+\end{array}$
+
+\item
+\textbf{Mid-point formula:}
+If $A=(x_1,y_1)$, $B=(x_2,y_2)$ and $C(x,y)$ 
+is the midpoint of $AB$ then
+
+$\begin{array}{rclrc}
+x= & \underline{x_1+x_2}  &, \qquad & y=& \underline{y_1+y_2} \\
+ & 2 & & & 2 
+\end{array}$
+
+\subsection{Triangles}
+
+\item
+\textbf{Centroid formula:}
+If $G(x,y)$ is the centroid of a triangle whose vertices
+
+are $A(x_1,y_1), B(x_2,y_2), C(x_3,y_3)$, then
+
+$\begin{array}{rclrc}
+x= & \underline{x_1+x_2+x_3}  &, \qquad & y=& \underline{y_1+y_2+y_3} \\
+ & 3 & & & 3 
+\end{array}$
+
+\item
+Area of a triangle whose vertices are $A(x_1,y_1), B(x_2,y_2), C(x_3,y_3)$ is
+
+$\Delta = \half|
+x_1(y_2-y_3)+
+x_2(y_3-y_1)+
+x_3(y_1-y_2)|$
+
+Area of a triangle whose vertices are $O(0,0), A(x_1,y_1), B(x_2,y_2)$ is
+
+$\Delta = \half|
+x_1y_2
+-x_2y_1|$
+
+\subsection{Straight lines}
+
+\item
+Equation of the x-axis is $y=0$
+
+Equation of the y-axis is $x=0$
+
+\item
+Equation of straight line parallel to x-axis and passing through point $P(a,b)$ is $y=b$
+
+Equation of straight line parallel to y-axis and passing through point $P(a,b)$ is $x=a$
+
+\item
+Slope of a straight line
+
+$m = \tan \theta = 
+\begin{array}{c}
+\underline{y_2-y_1} \\
+x_2-x_1
+\end{array}
+$ 
+
+where $\theta$ is the inclination of the straight line and $(x_1,y_1)$ and $(x_2,y_2)$ are any two points on the line.
+
+\item
+Equation of a straight line
+
+\begin{tabular}{lc}
+Slope-origin form & $y=mx$ \\
+Point-origin form & $xy_1 = yx_1$ \\
+Slope-intercept form & $y=mx+c$ \\
+Point-slope form & $y-y_1 = m(x-x_1)$ \\
+Two-points form & $
+\begin{array}{ccc}
+y-y_1 & = & x-x_1 \\
+\overline{y_2-y_1} & &  \overline{x_2-x_1} \\
+\end{array}
+$ \\
+Double-intercept form & $xb + ya = ab$ \\
+Normal form & $x\cos\alpha + y\sin\alpha = p$ \\
+\end{tabular}
+
+\item
+Parametric equations of a straight line are
+
+$x=x_1 + r\cos\theta
+\qquad
+y=y_1 + r\sin\theta$
+
+\item
+General equation of a straight line is $ax+by+c=0$
+
+For this line, 
+
+Slope=$-\begin{array}{c}\underline{a} \\ b\end{array}$
+\qquad
+x-intercept = $-\begin{array}{c}\underline{c} \\ a\end{array}$
+\qquad
+y-intercept = $-\begin{array}{c}\underline{c} \\ b\end{array}$
+
+\subsection{Line pairs}
+
+\item
+The acute angle between
+two straight lines with slopes $m$ and $m'$
+is $\tan \theta=\Big|
+\begin{array}{c}
+m-m' \\
+\overline{1+mm'}
+\end{array}\Big|$
+
+\item
+The straight lines with slopes $m$ and $m'$
+are mutually perpendicular iff $mm'=-1$
+
+\item
+The straight lines with slopes $m$ and $m'$
+are parallel to each other iff $m=m'$
+
+\item
+Any line parallel to the line $ax+by+c=0$ has an equation of the form 
+$ax+by+k=0$ 
+where $k \elemof{R}$
+
+\item
+Any line perpendicular to the line $ax+by+c=0$ has an equation of the form 
+$bx-ay+k=0$
+where $k \elemof{R}$
+
+\item
+The acute angle between the two 
+straight lines $ax+by+c=0$, $a'x+b'y+c'=0$ 
+is given by
+\begin{equation}\label{eq:slopebetweenlines}
+\tan\theta=\Big|\begin{array}{c}
+ab'-a'b \\
+\overline{aa'+bb'}
+\end{array}\Big|
+\end{equation}
+
+\item
+By \ref{eq:slopebetweenlines}
+The straight lines $ax+by+c=0$, $a'x+b'y+c'=0$ are
+
+mutually perpendicular if $aa'+bb'=0$
+
+parallel if $ab'=a'b$
+
+identical if $\begin{array}{ccccc}
+a & = & b & = & c \\
+\overline{a'} & & \overline{b'} & & \overline{c'}
+\end{array}$
+
+\item
+The perpendicular distance of the point $P(x_1,y_1)$ from the straight line
+$ax+by+c=0$ is
+
+$\Big|
+\begin{array}{c}
+\underline{ax_1+by_1+c} \\
+\sqrt{a^2+b^2}
+\end{array}
+\Big|$
+
+
+The perpendicular distance of the origin ($x_1=0, y_1=0$) from the straight line
+is
+
+$\Big|
+\begin{array}{c}
+c \\
+\overline{ \sqrt{a^2+b^2} }
+\end{array}
+\Big|$
+
+The distance between two parallel straight lines
+$ax+by+c=0$ and
+$ax+by+c'=0$ is
+
+$\Big|
+\begin{array}{c}
+c-c' \\
+\overline{ \sqrt{a^2+b^2} }
+\end{array}
+\Big|$
+
+\section{Mensuration}
+
+\subsection{Solids}
+
+\item
+Sphere of radius $r$
+
+Volume = $\frac{4}{3}\pi r^3$
+
+Surface area = $4\pi r^2$
+
+\item
+Right circular cone, radius $r$ height $h$ slant height $l$
+
+Volume = $\frac{1}{3} \pi r^2 h$
+
+Curved surface area=$\pi rl$
+
+Total surface area = $\pi rl + \pi r^2$
+
+\item
+Right circular cylinder, radius $r$ height $h$
+
+Volume = $\pi r^2 h$
+
+Curved surface area = $2\pi rh$
+
+Total surface area = $2\pi rh + 2\pi r^2$
+
+\item
+Cube with side length $x$
+
+Volume=$x^3$
+
+Surface area = $6x^2$
+
+\item
+Volume of a rectangular parallelopiped = length x breadth x height
+
+\subsection{Plane figures}
+
+\item
+Circle of radius $r$
+
+Area = $\pi r^2$
+
+Perimeter = $2\pi r$
+
+\item
+Triangle, area = $\half$ x base x height
+
+\item
+Rectangle, area = length x breadth, perimeter = 2 x (length + breadth)
+
+\item
+Square, area = (side)$^2$, perimeter = 4 x side
+
+\item
+Area of a trapezium = $\half$ x (sum of parallel sides) x (distance between the parallel sides)
+
+\item
+Area of an equilateral triangle = 
+$\begin{array}{c}
+\underline{\sqrt 3} \\
+4 \\
+\end{array}
+a^2=
+\begin{array}{c}
+1 \\
+\overline{\sqrt 3} \\
+\end{array} p^2$
+
+where $a$ is the length of a side and $p$ is the length of an altitude.
+
+\section{Numerical Methods}
+
+\item Bisection Method:
+$c=\begin{array}{c}
+\underline{x_1+x_2} \\
+2\end{array}
+$
+
+\item False Position (Regula-Falsi) Method:
+$\begin{array}{|ccc|cc}
+x_n+1 & 0      & 1 & & \\
+a     & f(a)   & 1 & = & 0 \\
+x_n   & f(x_n) & 1 & &
+\end{array}$
+
+\item Newton-Raphson Method:
+$x_{n+1} = x_n -
+\begin{array}{c}
+f(x_n) \\
+\overline{f'(x_n)}
+\end{array}$
+
+$f(x) = $ $n^{th}$ degree polynomial $<=> \Delta^nf(x)$ constant
+
+$y_{n+1}=(1+\Delta)y_n \qquad y_i=(1-\nabla)y_{i+1}$
+
+$1+\Delta=E \qquad E^{-1}=1-\nabla$
+
+\item Forward interpolation (Newton-Gregory):
+$u=
+\begin{array}{c}
+\underline{\overline{x} - x_0} \\
+n
+\end{array}$
+
+$f(\overline{x}) = f(x_0) + u \Delta f(x_0) +
+\begin{array}{c}
+\underline{u(u-1)} \\
+2!
+\end{array}
+\Delta^2f(x_0) + \dots$
+
+\item Backward interpolation:
+$\nu=
+\begin{array}{c}
+\underline{\overline{x} - x_n} \\
+n
+\end{array}$
+
+$f(\overline{x}) = f(x_n) + \nu \nabla f(x_n) +
+\begin{array}{c}
+\underline{\nu(\nu+1)} \\
+2!
+\end{array}
+\nabla^2f(x_n) + \dots$
+
+\item Trapezoidal Rule:
+$\int_a^b f(x) \ud x = h(
+\begin{array}{c}
+\underline{y_0+y_n} \\
+2
+\end{array}
++y_1+y_2+\dots+y_{n-1})$
+
+\item Simpson's (one-third) rule:
+$\int_a^b y \ud x=\frac{1}{3} h [(y_0 + y_n) + 4(y_1 + y_3 + \dots + y_{n-1})
++2(y_2 + y_4 + \dots + y_{n-2})]$
+$n$ is even.
+
+
+\end{enumerate}
+
+\end{document}

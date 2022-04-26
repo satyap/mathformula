@@ -1,0 +1,451 @@
+\documentclass[a4paper]{article}
+
+\include{formulainc}
+
+\fancyhf[FL]{Signals \& Systems Formul\ae by Satya}
+
+%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\thispagestyle{first}
+
+\begin{center}
+\LARGE { \textbf{Signals \& Systems formul\ae} }
+\author
+\end{center}
+
+\tableofcontents
+
+\section{General}
+
+Energy/Power Signal
+\begin{displaymath}
+P=
+\lim_{T \rightarrow 0}
+\frac {1} {2\pi}
+\int_{-T}^{T}
+|g(t)^2|
+dt
+\textrm{ = average power by $g(t)$ over time $T$ ($2T$?)}
+\end{displaymath}
+
+
+\begin{displaymath}
+E=
+\int_{-\infty}^{\infty}
+|g(t)^2
+dt
+\textrm{ = total energy in g(t)}
+\end{displaymath}
+
+
+Functions $f(t)$ and $g(t)$ are orthogonal in interval $a$ to $b$ if
+\begin{displaymath}
+\int_a^b f(t) g(t) dt =0
+\end{displaymath}
+
+
+\section{Fourier Series}
+
+\begin{displaymath}
+x(t)= a_0 +2
+\sum_{n=1}^\infty 
+(a_n \cos {n\omega_0 t} + b_n \sin n\omega_0 t)
+\end{displaymath}
+
+\begin{displaymath}
+\omega_0=\frac{2\pi}{T_0}
+\qquad
+a_0=\frac{1}{T_0}
+\int_0^{T_0} x(t) dt
+\end{displaymath}
+
+\begin{displaymath}
+a_n = \frac{1}{T_0}
+\int_0^{T_0} x(t) \cos n \omega_0 t dt
+\quad 
+b_n = \frac{1}{T_0}
+\int_0^{T_0} x(t) \sin n \omega_0 t dt
+\end{displaymath}
+
+Polar form:
+\begin{displaymath}
+x(t)= c_0 +
+\sum_{n=1}^\infty C_n \cos (n \omega t + \phi_n)
+\end{displaymath}
+
+\begin{displaymath}
+c_0=a_0
+\qquad
+C_n=\sqrt{a_n^2 + b_n^2}
+\qquad
+\phi_n=-\tan^{-1} \frac{b_n}{a_n}
+\end{displaymath}
+
+Exponential form:
+
+\begin{displaymath}
+x(t)=
+\sum_{n=-\infty}^\infty C_n e^{jn\omega_0 t}
+\qquad
+C_n=
+\frac{1}{T_0}
+\int_0^{T_0} x(t) e^{-j\omega_0 nt} dt
+\end{displaymath}
+
+
+Spectrum of trignometric series exists for positive $\omega$ only.
+
+For exponential form, for real $x(t)$, magnitude spectrum is even, phase
+spectrum is odd.
+
+Magnitude spectrum -ve sign $\Rightarrow180^\circ$ phase shift.
+
+dc values= $a_0$ $S_0$ $C_0$ etc.
+
+Even function: $b_n=0$,  Odd function: $a_0=a_n=0$
+
+\begin{tabular}{l l}
+$S_n$ v/s $\omega$ :    & Amplitude spectrum\\
+$\phi_n$ v/s $\omega$ : & Phase spectrum\\
+\end{tabular}
+
+
+\begin{displaymath}
+a_0=c_0
+\qquad
+a_n=(C_n + C_{-n})
+\qquad
+b_n=j(C_n - C_{-n})
+\end{displaymath}
+
+\begin{displaymath}
+C_n=\frac{1}{2}(a_n - jb_n)
+\qquad
+C_{-n}=\frac{1}{2}(a_n + jb_n)
+\end{displaymath}
+
+
+\section{Fourier and Inverse Fourier Transforms}
+
+\begin{displaymath}
+F(\omega)=\int_{-\infty}^{\infty} f(t) e^{-j\omega t} dt
+\qquad
+f(t)=\frac{1}{2\pi} \int_{-\infty}^{\infty} F(\omega) e^{j\omega t}d\omega
+\end{displaymath}
+
+Fourier transform exists for $f(t)$ if:
+
+\begin{displaymath}
+\textrm{Energy } E = \int_{-\infty}^{\infty} |f(t)|^2 dt < \infty
+\end{displaymath}
+
+Phase spectrum does not exist if $F(\omega)$ is
+real. Magnitude $M=|F(\omega)|$
+
+\begin{displaymath}
+\pi(\frac{t}{\tau})=
+1 \textrm{ for }
+-\frac{\tau}{2}
+< t <
+\frac{\tau}{2}
+\textrm{ and 0 elsewhere}
+\end{displaymath}
+
+\begin{displaymath}
+sinc(x)=\frac{\sin \pi x}{\pi x}
+\end{displaymath}
+
+\begin{displaymath}
+sgn(t)=1 \textrm{ for } t>0 \textrm{ and } -1 \textrm{ for } t<0
+\end{displaymath}
+
+Sampling property of unit impulse function:
+\begin{displaymath}
+\int_{-\infty}^{\infty} m(t) \delta (t-\tau) dt = m(\tau)
+\end{displaymath}
+
+\subsection{Properties of Fourier Transform}
+
+\begin{displaymath}
+\textrm{Linearity:  }
+ax(t) + by(t)
+\stackrel{F}{\longleftrightarrow}
+aX(\omega) + bY(\omega)
+\end{displaymath}
+
+\begin{displaymath}
+\textrm{Time shifting:  }
+x(t-t_0)
+\stackrel{F}{\longleftrightarrow}
+e^{-j\omega t_0}X(\omega)
+\end{displaymath}
+
+\begin{displaymath}
+\textrm{Frequency shifting:  }
+x(t) e^{j\omega t_0}
+\stackrel{F}{\longleftrightarrow}
+X(\omega-\omega_0)
+\end{displaymath}
+
+\begin{displaymath}
+\textrm{Differentiation:  }
+\frac{d^nx(t)}{dt^n}
+\stackrel{F}{\longleftrightarrow}
+(j\omega)^nX(\omega)
+\end{displaymath}
+
+\begin{displaymath}
+\textrm{Integration:  }
+\int_{-\infty}^t x(t)dt
+\stackrel{F}{\longleftrightarrow}
+\frac{1}{j\omega}X(\omega) + \pi X(0)\delta(\omega)
+\end{displaymath}
+
+\begin{displaymath}
+\textrm{Scaling:  }
+x(at)
+\stackrel{F}{\longleftrightarrow}
+\frac{1}{|a|} X(\frac{\omega}{a})
+\end{displaymath}
+
+\begin{displaymath}
+\textrm{Duality:  }
+X(t)
+\stackrel{F}{\longleftrightarrow}
+2\pi x(-\omega)
+\end{displaymath}
+
+\begin{displaymath}
+\textrm{Convolution:  }
+x(t)*y(t)
+\stackrel{F}{\longleftrightarrow}
+X(\omega)Y(\omega)
+\end{displaymath}
+
+\begin{displaymath}
+F^{-1} (\frac{1}{a+j\omega}) = e^{-at}u(t)
+\end{displaymath}
+
+\begin{displaymath}
+\textrm{Parseval's theorem:  }
+\int_{-\infty}^{\infty}
+|x(t)|^2 dt = \frac{1}{2\pi}
+\int_{-\infty}^{\infty}
+|X(\omega)|^2 d\omega
+\end{displaymath}
+
+\begin{displaymath}
+|X(\omega)|^2 = \textrm{ energy density spectrum of x(t)}
+\end{displaymath}
+
+
+\section{z-Transform}
+
+\begin{displaymath}
+X(z)=\sum_{n=-\infty}^{\infty} x(n)z^{-n}
+\end{displaymath}
+
+\begin{displaymath}
+\textrm{If $z=re^{j\omega}$ then }
+X(z)=z\{x(n)\}=F\{x(n)r^{-n}\}
+\end{displaymath}
+
+If $r=1$ then z transform reduces to Fourier transform. If ROC (Region of
+Convergence) of ZT includes unit circle then $x(n)$ is FTable.
+
+\begin{displaymath}
+z\{a^nu(n)\}=\frac{z}{z-a} \textrm{ ROC: } z>a
+\textrm{ Note special case when a=1}
+\end{displaymath}
+
+\begin{displaymath}
+z\{-a^nu(-n-1)\}=\frac{z}{z-a} \textrm{ ROC: } z<a
+\end{displaymath}
+
+\subsection{Properties of z-Transform}
+
+%%%%%%%%% ztrans
+
+\begin{displaymath}
+\textrm{Linearity:  }
+ax(n) + by(n)
+\stackrel{z}{\longleftrightarrow}
+aX(z) + bY(z)
+\textrm{  ROC: Intersection}
+\end{displaymath}
+
+\begin{displaymath}
+\textrm{Time scaling:  }
+a_nx(n)
+\stackrel{z}{\longleftrightarrow}
+X(a^{-1}z)
+\qquad
+r_1<z<r_2\longleftrightarrow ar_1<z<ar_2
+\end{displaymath}
+
+\begin{displaymath}
+\textrm{Time shifting: }
+x(n-k)
+\stackrel{z}{\longleftrightarrow}
+z^{-k}X(z)
+\end{displaymath}
+For $\infty$ duration series ROC remains same
+
+\begin{displaymath}
+\textrm{Time reversal: }
+x(-n)
+\stackrel{z}{\longleftrightarrow}
+X(z^{-1})
+\qquad
+r_1<z<r_2\leftrightarrow \frac{1}{r_1}>z>\frac{1}{r_2}
+\end{displaymath}
+
+\begin{displaymath}
+\textrm{Multiplication/differentiation: }
+nx(n)
+\stackrel{z}{\longleftrightarrow}
+-zX'(z)
+\end{displaymath}
+
+\begin{displaymath}
+\textrm{Division/integration: }
+\frac{x(n)}{n}
+\stackrel{z}{\longleftrightarrow}
+-\int_0^z \frac{X(z)}{z}dz
+\end{displaymath}
+
+\begin{displaymath}
+\textrm{Initial value thm: If $x(n)$ is causal then }
+x(0)=\lim_{z\rightarrow \infty} X(z)
+\end{displaymath}
+
+
+\begin{displaymath}
+\textrm{Convolution: }
+x_1(n) * x_2(n)
+\stackrel{z}{\longleftrightarrow}
+X_1(z)\cdot X_2(z)
+\end{displaymath}
+
+\begin{displaymath}
+x(n)=\sum_{k=-\infty}^{\infty} x_1(k)x_2(n-k)
+\end{displaymath}
+
+\begin{displaymath}
+x(n-k) \stackrel{z}{\longleftrightarrow} 
+z^{-k}[X^+(z) + 
+\sum_{n=1}^{k} x(-n)z^n ]
+\qquad k>0
+\end{displaymath}
+
+ROC $|z|>a_{max} \Rightarrow$ causal system
+
+ROC $|z|<a_{min} \Rightarrow$ anticausal system
+
+ROC includes unit circle $\Rightarrow$ stable system
+
+
+\section{Laplace Transform}
+
+\begin{displaymath}
+L\{f(t)\}=F(s)=
+\int_{-\infty}^{\infty} e^{-st}f(t)dt
+\end{displaymath}
+
+\begin{displaymath}
+L\{f(t)\}=F\{f(t)e^{-\sum t}\}
+\end{displaymath}
+
+If ROC of LT includes $\sigma=0$ then f(t) is FTable.
+
+Derivative:
+\begin{displaymath}
+\frac{d}{dt}f(t) 
+\stackrel{L}{\longleftrightarrow}
+aF(s)-f(0)
+\end{displaymath}
+
+\begin{displaymath}
+\frac{d^2}{dt^2}f(t) 
+\stackrel{L}{\longleftrightarrow}
+a^2F(s)-sf(0)-f'(0)
+\end{displaymath}
+
+\begin{displaymath}
+\frac{d^3}{dt^3}f(t) 
+\stackrel{L}{\longleftrightarrow}
+a^3F(s)-s^2f(0)-sf'(0)-f''(0)
+\end{displaymath}
+
+
+\begin{displaymath}
+\textrm{Integral: }
+\int f(t)dt
+\stackrel{L}{\longleftrightarrow}
+\frac{1}{s}F(s) + \frac{1}{s}f^{-1}(0)
+\end{displaymath}
+
+\begin{displaymath}
+\textrm{Time shifting: }
+f(t-a)
+\stackrel{L}{\longleftrightarrow}
+e^{-as}F(s)
+\end{displaymath}
+
+
+\begin{displaymath}
+\textrm{Unit impulse: }
+\delta(t)
+\stackrel{L}{\longleftrightarrow}
+1
+\end{displaymath}
+
+\begin{displaymath}
+\textrm{Unit step: }
+u(t)
+\stackrel{L}{\longleftrightarrow}
+\frac{1}{s}
+\end{displaymath}
+
+\begin{displaymath}
+t^n
+\stackrel{L}{\longleftrightarrow}
+\frac{n!}{s+{n+1}}
+\end{displaymath}
+
+\begin{displaymath}
+\sin \omega t
+\stackrel{L}{\longleftrightarrow}
+\frac{\omega}{s^2 + \omega ^2}
+\end{displaymath}
+
+\begin{displaymath}
+\cos \omega t
+\stackrel{L}{\longleftrightarrow}
+\frac{s}{s^2 + \omega ^2}
+\end{displaymath}
+
+\begin{displaymath}
+e^{-at}
+\stackrel{L}{\longleftrightarrow}
+\frac{1}{s+a}
+\end{displaymath}
+
+\begin{displaymath}
+\textrm{Initial value: }
+\lim_{t\rightarrow 0} f(t)
+\stackrel{L}{\longleftrightarrow}
+\lim_{s\rightarrow\infty} sF(s)
+\end{displaymath}
+
+\begin{displaymath}
+\textrm{Final value: }
+\lim_{t\rightarrow\infty} f(t)
+\stackrel{L}{\longleftrightarrow}
+\lim_{s\rightarrow 0} sF(s)
+\end{displaymath}
+
+
+\end{document}

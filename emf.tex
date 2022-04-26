@@ -1,0 +1,264 @@
+\documentclass[a4paper]{article}
+
+\include{formulainc}
+
+\fancyhf[FL]{EMF formul\ae\ by Satya}
+
+%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\thispagestyle{first}
+
+\begin{center}
+\LARGE { \textbf{Electromagnetic Fields \& Waves} }
+\author
+\end{center}
+
+\tableofcontents
+
+\section{Div, Grad, Curl, Laplacian}
+
+{\large Divergence:}
+\begin{displaymath}
+\textrm{Cartesian: }
+\nabla \cdot \mathbf D =
+\frac{\partial D_x}{\partial x} +
+\frac{\partial D_y}{\partial y} +
+\frac{\partial D_z}{\partial z} 
+\end{displaymath}
+
+\begin{displaymath}
+\textrm{Cylindrical: }
+\nabla \cdot \mathbf D =
+\frac 1 r \frac \partial {\partial r} (r D_X)+
+\frac 1 r \frac {\partial D_\theta} {\partial \theta}+
+\frac{\partial D_z}{\partial z}
+\end{displaymath}
+
+\begin{displaymath}
+\textrm{Spherical: }
+\nabla \cdot \mathbf D =
+\frac 1 {r^2} \frac \partial {\partial r} (r^2 D_X)+
+\frac 1 {r \sin \theta} \frac \partial {\partial\theta} (D_\theta \sin\theta) +
+\frac 1 {r \sin\theta} \frac{\partial D_\phi}{\partial\phi}
+\end{displaymath}
+
+{\large Gradient:}
+\begin{displaymath}
+\textrm{Cartesian: }
+\nabla V =
+\frac {\partial V}{\partial x} \vec{i}+
+\frac {\partial V}{\partial y} \vec{j}+
+\frac {\partial V}{\partial z} \vec{k}
+\end{displaymath}
+
+
+\begin{displaymath}
+\textrm{Cylindrical: }
+\nabla V =
+\frac{\partial V}{\partial r} a_r +
+\frac 1 r \frac {\partial V}{\partial \theta} a_\theta +
+\frac {\partial V}{\partial z} a_z
+\end{displaymath}
+
+\begin{displaymath}
+\textrm{Spherical: }
+\nabla V=
+\frac{\partial V}{\partial r}a_r +
+\frac 1 r \frac {\partial V}{\partial \theta} a_\theta +
+\frac 1 {r \sin \theta} \frac {\partial V}{\partial \phi} a_\phi
+\end{displaymath}
+
+
+{\large Curl:}
+
+\begin{displaymath}
+\textrm{Cartesian: }
+\nabla \times \mathbf H =
+(\frac{\partial H_z}{\partial y} - \frac{\partial H_y}{\partial z}) a_x +
+(\frac{\partial H_x}{\partial z} - \frac{\partial H_z}{\partial x}) a_y +
+(\frac{\partial H_y}{\partial x} - \frac{\partial H_x}{\partial y}) a_z
+\end{displaymath}
+
+\begin{displaymath}
+\textrm{Cylindrical: }
+\nabla \times \mathbf H =
+(\frac 1 r \frac{\partial H_z}{\partial \theta} - \frac{\partial
+H_\theta}{\partial z}) a_r +
+(\frac{\partial H_r}{\partial z} - \frac{\partial H_z}{\partial
+r}) a_\theta +
+\frac 1 r [\frac{\partial (r H_\theta)}{\partial r} -
+\frac{\partial H_r}{\partial \theta}] a_z
+\end{displaymath}
+
+Spherical:
+
+\begin{eqnarray}
+\nabla \times \mathbf H = 
+\frac 1 {r\sin \theta} [ \frac{\partial H_z}{\partial \theta} -
+\frac{\partial
+H_\theta}{\partial \phi}) a_r + 
+\frac 1 r [
+\frac 1 {\sin\theta}
+\frac{\partial H_r}{\partial \phi} - \frac{\partial(rH_\phi)}{\partial
+r}) a_\theta +
+{}\nonumber\\
+\frac 1 r [\frac{\partial (r H_\theta)}{\partial r} -
+\frac{\partial H_r}{\partial \theta}] a_\phi
+\nonumber
+\end{eqnarray}
+
+{\large Laplacian:}
+
+\begin{displaymath}
+\textrm{Cartesian: }
+\nabla^2 V = 
+\frac{\partial ^2 V}{\partial x^2} +
+\frac{\partial ^2 V}{\partial y^2} +
+\frac{\partial ^2 V}{\partial z^2} 
+\end{displaymath}
+
+\begin{displaymath}
+\textrm{Cylindrical: }
+\nabla^2 V = 
+\frac 1 r
+\frac \partial {\partial r}
+(r \frac{\partial V}{\partial r} ) +
+\frac 1 {r^2}
+\frac {\partial^2V} {\partial \theta^2} +
+\frac{\partial ^2 V}{\partial z^2} 
+\end{displaymath}
+
+\begin{displaymath}
+\textrm{Spherical: }
+\nabla ^2 V =
+\frac 1 {r^2}
+\frac \partial {\partial r}
+(r^2 \frac{\partial V}{\partial r} )+
+\frac 1 {r^2 \sin\theta}
+\frac \partial {\partial \theta}
+( \sin\theta \frac{\partial V}{\partial \theta}) +
+\frac 1 {r^2 \sin\theta}
+\frac{\partial^2 V}{\partial\phi^2} 
+\end{displaymath}
+
+\section{Vector identities}
+
+\begin{displaymath}
+\nabla\cdot(\nabla\times\mathbf F ) = 0
+\qquad
+\nabla \times(\nabla f)=0
+\qquad
+\nabla \cdot (\nabla f)=\nabla^2f
+\qquad
+\end{displaymath}
+
+\begin{displaymath}
+\nabla \times(\nabla \times \mathbf F) =
+\nabla (\nabla \cdot \mathbf F) - 
+\nabla^2 f
+\end{displaymath}
+
+\begin{displaymath}
+\nabla(fg)=f\nabla g + g\nabla f
+\qquad 
+\nabla \cdot(f \mathbf G) =
+\nabla f \cdot \mathbf G + f \nabla \cdot \mathbf G
+\end{displaymath}
+
+\begin{displaymath}
+\nabla \times (f\mathbf G) =
+\nabla f \times \mathbf G + f \times \nabla \mathbf G
+\end{displaymath}
+
+\begin{displaymath}
+\nabla(\mathbf F \cdot \mathbf G) =
+(\mathbf F \cdot \nabla) \mathbf G +
+(\mathbf G \cdot \nabla) \mathbf F +
+\mathbf F \times (\nabla \times \mathbf G) +
+\mathbf G \times (\nabla \times \mathbf F)
+\end{displaymath}
+
+\begin{displaymath}
+\nabla \cdot )\mathbf F \times \mathbf G) =
+\mathbf G \cdot (\nabla \times \mathbf F) -
+\mathbf F \cdot (\nabla \times \mathbf G)
+\end{displaymath}
+
+\begin{displaymath}
+\nabla \times (\mathbf F \times \mathbf G) =
+\mathbf F (\nabla \cdot \mathbf G) -
+\mathbf G (\nabla \cdot \mathbf F) +
+(\mathbf G \cdot \nabla) \mathbf F -
+(\mathbf F \cdot \nabla) \mathbf G
+\end{displaymath}
+
+
+\section{Theorems}
+
+{\large Divergence theorem:}
+\begin{displaymath}
+\int_v \nabla \cdot \mathbf A \  dv= \int_s \mathbf A \cdot ds
+\end{displaymath}
+
+{\large Stoke's theorem:}
+\begin{displaymath}
+\int_s \nabla \times \mathbf A \ ds = \int_c \mathbf A \cdot dl
+\end{displaymath}
+
+
+{\large Helmholtz' theorem: }\\
+A vector field is completely specified by its divergence and
+curl. Conversely, any vector field may be expressed as the sum of an
+irrotational vector and a solenoidal vector.
+
+\begin{displaymath}
+\textrm{Potential }\phi = -
+\int_\infty^P \mathbf E \cdot \mathbf{dl} \quad \textrm{(volts)}
+\end{displaymath}
+
+Spherical conducting shell: 
+\begin{displaymath}
+{}\nonumber\\
+\quad 
+\textrm{Inside: }
+\quad
+E=0
+\quad
+\phi=\frac Q {4 \pi \epsilon_0 R}
+\end{displaymath}
+
+\begin{displaymath}
+\textrm{Outside: }
+E= \frac Q {4 \pi \epsilon_0 r^2}
+\quad
+\mathbf \phi= \frac Q {4 \pi \epsilon_0 r}
+\end{displaymath}
+(small $r$ is outer radius of shell)
+
+
+Charged wire (cylinder) of infinite length:
+\begin{displaymath}
+\phi_a-\phi_b=\frac{Q_l}{2\pi\epsilon_0} \ln \frac{r_b}{r_a}
+\end{displaymath}
+
+{\large Gauss' Law:}
+\begin{displaymath}
+\oint_s \mathbf {D\cdot ds} = \int_v Q_v dv
+\quad
+\textrm{ or }
+\quad
+\nabla\cdot\mathbf D=Q_v
+\end{displaymath}
+
+\begin{displaymath}
+\textrm{Laplace: }
+\nabla^2\phi=0
+\qquad
+\textrm{Poisson: }
+\nabla^2\phi=-\frac{Q_v}{\epsilon}
+\end{displaymath}
+
+
+\end{document}
